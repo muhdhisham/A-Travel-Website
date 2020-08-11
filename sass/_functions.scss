@@ -1,0 +1,11 @@
+// used for background image
+// reason for using function is that if we want to change the folder/directory of bg image only function is to be changed
+@function get-image($img){ 
+    @return '../images/#{$img}';
+}
+
+@function px-to-rem($size)
+{
+    $value : $size/16px;
+    @return #{$value}rem;
+}
