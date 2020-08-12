@@ -25,19 +25,121 @@ a {
 p, a, button, input {
   font-size: 1.125rem; }
 
+#dimmed-bg {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(20, 20, 20, 0.86);
+  top: 0;
+  left: 0;
+  transition: all 1s;
+  transform: translateX(-120vw);
+  visibility: hidden; }
 
+#full-site {
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
 
+#above-fold {
+  position: relative;
+  color: white;
+  padding-left: 92px;
+  padding-top: 62px;
+  box-sizing: border-box;
+  width: 94%;
+  height: 100vh;
+  display: inline-block;
+  opacity: 0;
+  transition: all 1s .5s; }
+  #above-fold nav {
+    display: inline-block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+    padding-bottom: 1.125rem;
+    padding-right: 4.5rem; }
+    #above-fold nav li {
+      display: inline-block;
+      padding: 0 1.875rem; }
+    #above-fold nav li:last-child {
+      padding-right: 0; }
+    #above-fold nav li:first-child {
+      padding-left: 0; }
+    #above-fold nav a {
+      transition: opacity .1s; }
+      #above-fold nav a:hover {
+        opacity: 0.8; }
+  #above-fold article {
+    margin-top: 12.75rem; }
+    #above-fold article h1 {
+      font-size: 2.25rem; }
+    #above-fold article p {
+      margin: 3rem 0;
+      width: 40rem;
+      line-height: 200%; }
+    #above-fold article button {
+      background-color: #404040;
+      color: #e8fff7;
+      padding: 0.8em 1.4em;
+      padding-right: 16rem;
+      transition: opacity .2s; }
+      #above-fold article button:hover {
+        opacity: 0.6; }
 
+@keyframes intro-content {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
 
+@keyframes intro-header {
+  0% {
+    transform: translateY(40px) scale(0.6); }
+  100% {
+    transform: translateY(0px) scale(1); } }
 
+#bg {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  position: fixed; }
 
-
-
-
-
-
-
-
-
-
-
+#landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  transition: all .4s;
+  position: relative;
+  z-index: 10;
+  animation-name: intro-content;
+  animation-duration: 1.4s;
+  animation-delay: .1s;
+  animation-fill-mode: both; }
+  #landing h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation-name: intro-header;
+    animation-duration: 1s;
+    animation-delay: .1s; }
+  #landing p {
+    width: 36vw;
+    text-align: center;
+    line-height: 190%; }
+  #landing button {
+    color: #425831;
+    background-color: white;
+    padding: .6em 4.2em;
+    border-radius: 4px;
+    margin-top: 0.875rem; }
+    #landing button:hover {
+      opacity: .8; }
