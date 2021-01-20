@@ -57,14 +57,18 @@
     }
     
     button {
-        color: #425831;
+        color: #000000;
         background-color: white;
         padding: .6em 4.2em;
-        border-radius: 4px;
+        border-radius: 0px;
         margin-top: px-to-rem(14px);
-        
+        box-shadow: 4px 4px gray;
+        transition: all 0.4s;
         &:hover {
             opacity: .8;
+            box-shadow: none;
+            background-color: gray;
+            transition: all 0.4s;
         }
     }
     

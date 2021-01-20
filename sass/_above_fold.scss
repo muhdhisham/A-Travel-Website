@@ -59,11 +59,16 @@ $bg-color: rgba(227, 227, 227, .08);
         
         li:first-child { padding-left: 0; }
         
+        
         a {
-            transition: opacity .1s;
+            transition: 300ms;
+            // border-bottom: 1px solid transparent;
+            text-decoration: none;
+            // transition: text-decoration .4s linear .4s;
             
             &:hover {
                 opacity: .8;
+                box-shadow: 0 3px 0 #7f7f7f;
             }
             
         }
