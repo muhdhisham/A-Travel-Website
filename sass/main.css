@@ -88,12 +88,15 @@ p, a, button, input {
 }
 
 #above-fold nav a {
-  -webkit-transition: opacity .1s;
-  transition: opacity .1s;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  text-decoration: none;
 }
 
 #above-fold nav a:hover {
   opacity: .8;
+  -webkit-box-shadow: 0 3px 0 #7f7f7f;
+          box-shadow: 0 3px 0 #7f7f7f;
 }
 
 #above-fold article {
